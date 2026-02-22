@@ -39,7 +39,7 @@ class HallSensor:
 
     def get_column_time(self):
         # return self.column_time
-        return 10000
+        return 1000
 
     def get_last_delta(self):
         return self.last_delta
