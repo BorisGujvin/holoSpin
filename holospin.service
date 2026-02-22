@@ -1,0 +1,22 @@
+[Unit]
+Description=HoloSpin Python Application
+After=network.target
+
+[Service]
+Type=simple
+User=borys
+WorkingDirectory=/home/borys/holospin
+
+ExecStart=/home/borys/holospin/.venv/bin/python main.py
+
+Restart=always
+RestartSec=10
+StartLimitInterval=5min
+StartLimitBurst=5
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=holospin
+
+[Install]
+WantedBy=multi-user.target

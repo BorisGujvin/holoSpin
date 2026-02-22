@@ -1,0 +1,25 @@
+sudo apt update
+sudo apt install python3-venv
+python3 -m venv .venv
+sudo apt install build-essential python3-dev swig
+sudo apt install python3-lgpio liblgpio-dev
+source .venv/bin/activate
+pip install lgpio apa102-pi spidev
+pip install RPi.GPIO==0.7.1a4
+
+
+
+
+sudo nano /etc/systemd/system/holospin.service
+sudo systemctl daemon-reload
+sudo systemctl enable holospin.service
+sudo systemctl start holospin.service
+
+
+
+
+journalctl -u holospin.service -n 50 -f //Logs
+sudo systemctl status holospin.service //Status
+sudo systemctl stop holospin.service //stop
+sudo systemctl restart holospin.service //restart
+
