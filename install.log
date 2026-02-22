@@ -1,8 +1,14 @@
+ssh-keygen -R 192.168.50.210
+
+
+sudo raspi-config # allow SPI
 sudo apt update
+sudo apt install git
+git clone https://github.com/BorisGujvin/holoSpin.git
+cd holoSpin
 sudo apt install python3-venv
 python3 -m venv .venv
-sudo apt install build-essential python3-dev swig
-sudo apt install python3-lgpio liblgpio-dev
+sudo apt install build-essential python3-dev swig python3-lgpio liblgpio-dev
 source .venv/bin/activate
 pip install lgpio apa102-pi spidev RPi.GPIO==0.7.1a4
 

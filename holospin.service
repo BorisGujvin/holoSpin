@@ -5,9 +5,9 @@ After=network.target
 [Service]
 Type=simple
 User=borys
-WorkingDirectory=/home/borys/holospin
+WorkingDirectory=/home/borys/holoSpin
 
-ExecStart=/home/borys/holospin/.venv/bin/python main.py
+ExecStart=/home/borys/holoSpin/.venv/bin/python main.py
 
 Restart=always
 RestartSec=10
@@ -16,7 +16,7 @@ StartLimitBurst=5
 
 StandardOutput=journal
 StandardError=journal
-SyslogIdentifier=holospin
+SyslogIdentifier=holoSpin
 
 [Install]
 WantedBy=multi-user.target
