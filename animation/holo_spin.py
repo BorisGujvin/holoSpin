@@ -40,12 +40,14 @@ class HoloSpin(IAnimation):
             else:
                 print ("no time", flush=True)
                 time.sleep(1)
+        return True
 
     def on_interrupt(self):
         self.led.fill_white()
 
     def on_cycle_complete(self):
-        pass
+        while not self.hall.should_restart():
+            time.sleep(0.01)
 
     def draw_column(self, column_index):
         if column_index >= len(self.columns):
