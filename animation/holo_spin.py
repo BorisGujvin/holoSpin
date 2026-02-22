@@ -31,7 +31,7 @@ class HoloSpin(IAnimation):
     def run_cycle(self):
         for column in range(config.NUM_COLUMNS):
             if self.hall.should_restart():
-                return
+                return False
             self.draw_column(column)
             column_time = self.hall.get_column_time()
             if column_time:
@@ -39,6 +39,7 @@ class HoloSpin(IAnimation):
                 time.sleep(column_time / 1000)
             else:
                 print ("no time", flush=True)
+                time.sleep(1)
 
     def on_interrupt(self):
         self.led.fill_white()
