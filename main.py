@@ -11,8 +11,8 @@ if __name__ == "__main__":
     led = LEDStrip(config.NUM_LEDS, config.BRIGHTNESS)
 
     # Choose your animation here
-    # animation = RainbowRunner(led, hall)
-    animation = HoloSpin(led, hall)
+    animation = RainbowRunner(led, hall)
+    # animation = HoloSpin(led, hall)
 
     print(f"Running {animation.__class__.__name__} with magnet restart...", flush=True)
     print("Press Ctrl+C to stop", flush=True)
