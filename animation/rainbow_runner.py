@@ -1,7 +1,7 @@
 import config
 import colorsys
 import time
-from ianimation import IAnimation
+from animation.ianimation import IAnimation
 
 class RainbowRunner(IAnimation):
     """Original animation: forward -> pause -> backward -> pause"""

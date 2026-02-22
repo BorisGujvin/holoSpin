@@ -1,1 +1,4 @@
 .idea/
+__pycache__/
+animation/__pycache__/
+hardware/__pycache__/
