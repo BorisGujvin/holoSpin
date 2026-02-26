@@ -5,8 +5,8 @@ from animation.ianimation import IAnimation
 
 class HoloSpin(IAnimation):
     columns = [
-        [(0, 0, 255)] * 35 + [(255, 255, 0)] * 35,
         [(255, 255, 0)] * 35 + [(0, 0, 255)] * 35,
+        [(0, 0, 255)] * 35 + [(255, 255, 0)] * 35,
     ]
 
     def run_cycle(self):
